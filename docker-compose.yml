@@ -75,6 +75,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
+  
   control-center:
     image: confluentinc/cp-enterprise-control-center:7.4.0
     hostname: control-center
@@ -93,7 +94,7 @@ services:
       CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 1
       CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 1
       CONFLUENT_METRICS_TOPIC_REPLICATION: 1
-      CONFLIENT_METRICS_ENABLE: 'false'
+      CONFLUENT_METRICS_ENABLE: 'false'
       PORT: 9021
     networks:
       - confluent
